@@ -1,7 +1,6 @@
 <h3>Code Used for RDD Verification in Apache Spark (Google Colab)</h3>
 <pre><code>from pyspark import SparkContext
 
-# Stop any existing SparkContext
 try:
     sc.stop()
 except:
@@ -10,7 +9,7 @@ except:
 # Create Spark Context
 sc = SparkContext("local[*]", "RDDVerification")
 
-# ONLY the words required by the guide
+# the words required
 data = [
     ("Recognition", 4),
     ("Vision", 66),
