@@ -15,7 +15,7 @@ data = [
     ("Vision", 66),
 ]
 
-# Create RDD with only two words
+# Create RDD
 rdd = sc.parallelize(data)
 
 # Show RDD result
