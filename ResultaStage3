@@ -1,0 +1,28 @@
+<h3>Code Used for RDD Verification in Apache Spark (Google Colab)</h3>
+<pre><code>from pyspark import SparkContext
+
+# Stop any existing SparkContext
+try:
+    sc.stop()
+except:
+    pass
+
+# Create Spark Context
+sc = SparkContext("local[*]", "RDDVerification")
+
+# ONLY the words required by the guide
+data = [
+    ("Recognition", 4),
+    ("Vision", 66),
+]
+
+# Create RDD with only two words
+rdd = sc.parallelize(data)
+
+# Show RDD result
+rdd_output = rdd.collect()
+rdd_output
+
+# Stop Spark
+sc.stop()
+</code></pre>
